@@ -24,7 +24,7 @@ function App() {
   return (
     <>
       <Navbar />
-      <div className="container">
+      <div className="container ">
         <ToDoList tasks={tasks} onTaskChange={handleTaskChange} />
       </div>
       <Footer />
