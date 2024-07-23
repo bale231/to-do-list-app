@@ -31,7 +31,7 @@ const ToDoList = ({ tasks, onTaskChange }) => {
   };
 
   return (
-    <div className="flex flex-col gap-2">
+    <div className="flex flex-col relative gap-2">
       <div className="flex flex-col pt-4 gap-2 p-3">
         <div className="flex w-full justify-between gap-2">
           <input
@@ -101,7 +101,7 @@ const ToDoList = ({ tasks, onTaskChange }) => {
           <p className="[text-shadow:0px_1px_1px_0px_#950000]">Delete All</p>
         </button>
       </div>
-      <div className="h-[400px] w-full absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] overflow-auto flex flex-col gap-2 p-2">
+      <div className="h-[400px] w-full absolute top-40 overflow-auto flex flex-col gap-2 p-2">
         <TransitionGroup>
           {tasks.map((task) => (
             <CSSTransition key={task.id} timeout={300} classNames="fade">
