@@ -30,6 +30,18 @@ const ToDoList = ({ tasks, onTaskChange }) => {
     }
   };
 
+  const splitTextIntoSpans = (text) => {
+    return text.split("").map((char, index) => (
+      <span
+        key={index}
+        style={{ animationDelay: `${index * 0.1}s` }}
+        className="letter"
+      >
+        {char}
+      </span>
+    ));
+  };
+
   return (
     <div className="flex flex-col relative gap-2">
       <div className="flex flex-col pt-4 gap-2 p-3">
@@ -123,7 +135,9 @@ const ToDoList = ({ tasks, onTaskChange }) => {
                     </svg>
                   </div>
                 </div>
-                <p className="flex-1 text-2xl">{task.text}</p>
+                <p className="task-label flex-1 text-3xl animated-text">
+                  {splitTextIntoSpans(task.text)}
+                </p>
                 <button
                   onClick={() => handleDelete(task.id)}
                   className="group relative flex h-14 w-14 flex-col items-center justify-center overflow-hidden rounded-xl border-2 border-red-800 bg-red-400 hover:bg-red-600"

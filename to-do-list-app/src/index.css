@@ -243,3 +243,19 @@ a {
   opacity: 0;
   transition: opacity 300ms;
 }
+
+.task-label {
+  font-family: "Caveat", cursive;
+}
+
+.animated-text .letter {
+  display: inline-block;
+  opacity: 0;
+  animation: appear 0.3s forwards;
+}
+
+@keyframes appear {
+  to {
+    opacity: 1;
+  }
+}
