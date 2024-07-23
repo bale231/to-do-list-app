@@ -89,8 +89,8 @@ a {
   left: 0;
   width: 50px;
   height: 50px;
-  border: 2px solid #bfbfc0;
   border-radius: 50%;
+  background-color: #f39f5a;
 }
 
 .checkbox-wrapper-12 .cbx label {
